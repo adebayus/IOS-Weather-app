@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="WheaterApp" customModuleProvider="target">
+            <connections>
+                <outlet property="currentWeatherView" destination="Erv-os-TZG" id="0z1-fL-49F"/>
+                <outlet property="forecastWeatherView" destination="Hhf-sl-oK9" id="6c8-tW-mdY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSN-cb-Vv8" userLabel="Content">
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTs-U1-pbr" userLabel="TopView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="529"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Erv-os-TZG">
+                                    <rect key="frame" x="10" y="10" width="394" height="509"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageCloudy" translatesAutoresizingMaskIntoConstraints="NO" id="s6D-eX-DOZ">
+                                            <rect key="frame" x="77" y="134.5" width="240" height="240"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="WJD-bb-aiA"/>
+                                                <constraint firstAttribute="height" constant="240" id="bMw-cD-xDT"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="Shark"/>
+                                    <constraints>
+                                        <constraint firstItem="s6D-eX-DOZ" firstAttribute="centerX" secondItem="Erv-os-TZG" secondAttribute="centerX" id="Fan-kN-BJ9"/>
+                                        <constraint firstItem="s6D-eX-DOZ" firstAttribute="centerY" secondItem="Erv-os-TZG" secondAttribute="centerY" id="ter-90-xEi"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Erv-os-TZG" firstAttribute="leading" secondItem="NTs-U1-pbr" secondAttribute="leading" constant="10" id="5g3-i5-UxO"/>
+                                <constraint firstAttribute="trailing" secondItem="Erv-os-TZG" secondAttribute="trailing" constant="10" id="Xqj-gO-3IC"/>
+                                <constraint firstAttribute="bottom" secondItem="Erv-os-TZG" secondAttribute="bottom" constant="10" id="s0T-2C-2T2"/>
+                                <constraint firstItem="Erv-os-TZG" firstAttribute="top" secondItem="NTs-U1-pbr" secondAttribute="top" constant="10" id="vSQ-hJ-3t7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhf-sl-oK9" userLabel="BottomView">
+                            <rect key="frame" x="10" y="539" width="394" height="265"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-SY-Zaq">
+                                    <rect key="frame" x="15" y="15" width="364" height="33.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQT-XG-pqz">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="33.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next 5 Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhT-14-lF0">
+                                            <rect key="frame" x="267" y="6" width="97" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" systemColor="tintColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ULA-hd-x2V">
+                                    <rect key="frame" x="15" y="63.5" width="364" height="186.5"/>
+                                    <color key="backgroundColor" name="DarkShark"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Av-UE-98f">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" name="Shark"/>
+                            <constraints>
+                                <constraint firstItem="S8c-SY-Zaq" firstAttribute="leading" secondItem="Hhf-sl-oK9" secondAttribute="leading" constant="15" id="2Y5-52-TeF"/>
+                                <constraint firstAttribute="bottom" secondItem="ULA-hd-x2V" secondAttribute="bottom" constant="15" id="IN1-Su-t5t"/>
+                                <constraint firstItem="S8c-SY-Zaq" firstAttribute="top" secondItem="Hhf-sl-oK9" secondAttribute="top" constant="15" id="NuJ-7U-s0y"/>
+                                <constraint firstAttribute="trailing" secondItem="ULA-hd-x2V" secondAttribute="trailing" constant="15" id="TvQ-rW-5Or"/>
+                                <constraint firstItem="ULA-hd-x2V" firstAttribute="leading" secondItem="Hhf-sl-oK9" secondAttribute="leading" constant="15" id="d55-hi-TY3"/>
+                                <constraint firstItem="ULA-hd-x2V" firstAttribute="top" secondItem="S8c-SY-Zaq" secondAttribute="bottom" constant="15" id="dG2-Ao-EsO"/>
+                                <constraint firstAttribute="trailing" secondItem="S8c-SY-Zaq" secondAttribute="trailing" constant="15" id="w3H-P1-46f"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NTs-U1-pbr" secondAttribute="trailing" id="0bJ-Tj-XiR"/>
+                        <constraint firstItem="NTs-U1-pbr" firstAttribute="leading" secondItem="pSN-cb-Vv8" secondAttribute="leading" id="68Z-YU-KvS"/>
+                        <constraint firstItem="NTs-U1-pbr" firstAttribute="height" secondItem="pSN-cb-Vv8" secondAttribute="height" multiplier="0.65" id="NHb-ra-XE6"/>
+                        <constraint firstItem="Hhf-sl-oK9" firstAttribute="top" secondItem="NTs-U1-pbr" secondAttribute="bottom" constant="10" id="jYx-If-Aor"/>
+                        <constraint firstAttribute="trailing" secondItem="Hhf-sl-oK9" secondAttribute="trailing" constant="10" id="jer-Ex-e9d"/>
+                        <constraint firstItem="Hhf-sl-oK9" firstAttribute="leading" secondItem="pSN-cb-Vv8" secondAttribute="leading" constant="10" id="p8c-ZO-OJb"/>
+                        <constraint firstAttribute="bottom" secondItem="Hhf-sl-oK9" secondAttribute="bottom" constant="10" id="pGX-60-A0V"/>
+                        <constraint firstItem="NTs-U1-pbr" firstAttribute="top" secondItem="pSN-cb-Vv8" secondAttribute="top" id="vMY-X8-6Vz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="DarkShark"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pSN-cb-Vv8" secondAttribute="trailing" id="Skt-Gs-eub"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pSN-cb-Vv8" secondAttribute="bottom" id="bFd-dq-Qwc"/>
+                <constraint firstItem="pSN-cb-Vv8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="l8q-Qk-WEk"/>
+                <constraint firstItem="pSN-cb-Vv8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nzS-KM-ZRy"/>
+            </constraints>
+            <point key="canvasLocation" x="20" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ImageCloudy" width="1776" height="1184"/>
+        <namedColor name="DarkShark">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Shark">
+            <color red="0.17647058823529413" green="0.17647058823529413" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

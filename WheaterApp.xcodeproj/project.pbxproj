@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		64B1EF822C2AA2FD00957B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1EF812C2AA2FD00957B01 /* AppDelegate.swift */; };
 		64B1EF842C2AA2FD00957B01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1EF832C2AA2FD00957B01 /* SceneDelegate.swift */; };
-		64B1EF862C2AA2FD00957B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1EF852C2AA2FD00957B01 /* ViewController.swift */; };
-		64B1EF892C2AA2FD00957B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B1EF872C2AA2FD00957B01 /* Main.storyboard */; };
 		64B1EF8B2C2AA2FF00957B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64B1EF8A2C2AA2FF00957B01 /* Assets.xcassets */; };
 		64B1EF8E2C2AA2FF00957B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B1EF8C2C2AA2FF00957B01 /* LaunchScreen.storyboard */; };
+		64B1EF992C2AA39B00957B01 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1EF972C2AA39B00957B01 /* HomeViewController.swift */; };
+		64B1EF9A2C2AA39B00957B01 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B1EF982C2AA39B00957B01 /* HomeViewController.xib */; };
+		64B1EF9F2C2AB0F500957B01 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1EF9E2C2AB0F500957B01 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		64B1EF7E2C2AA2FD00957B01 /* WheaterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheaterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B1EF812C2AA2FD00957B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B1EF832C2AA2FD00957B01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		64B1EF852C2AA2FD00957B01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		64B1EF882C2AA2FD00957B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64B1EF8A2C2AA2FF00957B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64B1EF8D2C2AA2FF00957B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64B1EF8F2C2AA2FF00957B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64B1EF972C2AA39B00957B01 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		64B1EF982C2AA39B00957B01 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		64B1EF9E2C2AB0F500957B01 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		64B1EF802C2AA2FD00957B01 /* WheaterApp */ = {
 			isa = PBXGroup;
 			children = (
+				64B1EFA12C2AB4D400957B01 /* Views */,
+				64B1EF9B2C2AB05F00957B01 /* Resources */,
+				64B1EF952C2AA36D00957B01 /* Modules */,
 				64B1EF812C2AA2FD00957B01 /* AppDelegate.swift */,
 				64B1EF832C2AA2FD00957B01 /* SceneDelegate.swift */,
-				64B1EF852C2AA2FD00957B01 /* ViewController.swift */,
-				64B1EF872C2AA2FD00957B01 /* Main.storyboard */,
 				64B1EF8A2C2AA2FF00957B01 /* Assets.xcassets */,
 				64B1EF8C2C2AA2FF00957B01 /* LaunchScreen.storyboard */,
 				64B1EF8F2C2AA2FF00957B01 /* Info.plist */,
 			);
 			path = WheaterApp;
+			sourceTree = "<group>";
+		};
+		64B1EF952C2AA36D00957B01 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				64B1EF962C2AA37400957B01 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		64B1EF962C2AA37400957B01 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64B1EF972C2AA39B00957B01 /* HomeViewController.swift */,
+				64B1EF982C2AA39B00957B01 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		64B1EF9B2C2AB05F00957B01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64B1EF9C2C2AB0D800957B01 /* Extensions */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64B1EF9C2C2AB0D800957B01 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64B1EF9E2C2AB0F500957B01 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64B1EFA12C2AB4D400957B01 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +170,7 @@
 			files = (
 				64B1EF8E2C2AA2FF00957B01 /* LaunchScreen.storyboard in Resources */,
 				64B1EF8B2C2AA2FF00957B01 /* Assets.xcassets in Resources */,
-				64B1EF892C2AA2FD00957B01 /* Main.storyboard in Resources */,
+				64B1EF9A2C2AA39B00957B01 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +181,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64B1EF862C2AA2FD00957B01 /* ViewController.swift in Sources */,
 				64B1EF822C2AA2FD00957B01 /* AppDelegate.swift in Sources */,
 				64B1EF842C2AA2FD00957B01 /* SceneDelegate.swift in Sources */,
+				64B1EF992C2AA39B00957B01 /* HomeViewController.swift in Sources */,
+				64B1EF9F2C2AB0F500957B01 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		64B1EF872C2AA2FD00957B01 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				64B1EF882C2AA2FD00957B01 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		64B1EF8C2C2AA2FF00957B01 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,8 +326,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6988R58JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WheaterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -306,6 +344,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.debs.WheaterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,8 +356,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6988R58JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WheaterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -333,6 +374,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.debs.WheaterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
